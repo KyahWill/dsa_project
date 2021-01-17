@@ -8,11 +8,6 @@
 *
 */
 
-/**
-* Pre,
-*
-*
-*/
 bool check(char* pattern, char* text, int counter, int size){
 	int i;
 	for(i = 0; i<size ;i++){
