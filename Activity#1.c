@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 /**
-*Will Vincent Parrone
-*Carl Vinas
-*
-*
+*   Problem - PATTERN MATCHING
+*   Done by:
+*   Will Vincent Parrone
+*   Carl Vinas
 */
 #define BOOL int
 #define TRUE  1
