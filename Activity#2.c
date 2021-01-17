@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+*	Problem 2
+*	Done by:
+*	Will Vincent Parrone
+*	Carl Vinas
+*/
 struct Digit{
 	int value;
 	struct Digit* next;	
@@ -35,12 +40,12 @@ int main(){
 	char num2[100];
 	int i = 0;
 	int carry = 0;
-	//Establishes Stacks
+
 	struct Digit *top_stack1 = NULL;
 	struct Digit *top_stack2 = NULL;
 	struct Digit *solution = NULL;
 	
-	printf("Enter First Digit to Add: ");
+	printf("Enter FirstDigit to Add:  ");
 	scanf("%s",&num1);	
 	
 	for(i = 0; i < strlen(num1);i++)
@@ -55,9 +60,14 @@ int main(){
 	struct Digit *temp = top_stack1;	
 
 	while(top_stack1 != NULL || top_stack2 != NULL){
+
+		
+		int ans = top(top_stack1) + top(top_stack2) + carry;]
+		/**
+		* For Debugging purposes
 		printf("\n %d + %d = ",top(top_stack1),top(top_stack2));
-		int ans = top(top_stack1) + top(top_stack2) + carry;
 		printf("%d ", ans );
+		*/
 		carry = ans/10;
 		ans = ans % 10;
 		solution = push((char)ans + '0',solution);
