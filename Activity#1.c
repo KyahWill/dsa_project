@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdbool.h>
 /**
 *Will Vincent Parrone
 *Carl Vinas
 *
+*
 */
-
-bool check(char* pattern, char* text, int counter, int size){
+#define BOOL int
+#define TRUE  1
+#define FALSE 0
+BOOL check(char* pattern, char* text, int counter, int size){
 	int i;
 	for(i = 0; i<size ;i++){
 		if(pattern[i] != text[counter+i])
-			return false;
+			return FALSE;
 	}	
-	return true;
+	return TRUE;
 }
 
 int solution(char* pattern, char* text, int size){
 	int x = 0;
 	int counter = 0;
-	int checker;
 	int string_length = strlen(text)- size+1;
 	for(counter = 0; counter < string_length; counter++)
-		if(check(pattern, text, counter,size) == true)
+		if(check(pattern, text, counter,size) == TRUE)
 			x++;
 	return x;
 }
-
 
 int main(){
 	char ch;
